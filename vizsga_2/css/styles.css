@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+font-family: 'Roboto',
+sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: white !important;
+}
+
+.nav-link {
+    text-transform: uppercase;
+}
+
+.content-in img {
+    border-radius: 10px;
+}
+
+/********** HERO ***********/
+
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/viti.jpg") top right;
+    background-size: cover;
+    position: relative;
+}
+
+#hero:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.55);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#hero .hero-container {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+#hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 64px;
+    font-family: "Satisfy", serif;
+/*    font-family: 'Satisfy', cursive;  */
+    color: #fff;
+}
+
+#hero h2 {
+    color: #eee;
+    margin-bottom: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#hero .btn-scroll {
+    transition: 0.4s;
+    color: rgba(255, 255, 255, 0.6);
+    animation: up-down 1s ease-in-out infinite alternate-reverse both;
+}
+
+
+#hero .btn-scroll i {
+    font-size: 48px;
+}
+
+#hero .btn-scroll:hover {
+    color: #ffb727;
+}
+
+@media (min-width: 1024px) {
+    #hero {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 575px) {
+    #hero h1 {
+        font-size: 40px;
+    }
+
+    #hero h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+@-webkit-keyframes up-down {
+    0% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/********** HERO END ************************/
+
+
+
+
+.start-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /*    border: 1px solid brown;*/
+}
+
+/*
+.start-link img,
+.felirat {
+    position: absolute;
+}
+*/
+
+.felirat {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    color: transparent;
+    letter-spacing: 1px;
+}
+
+.felirat h2 {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+
+.felirat:hover {
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+
+/************** MEDIA ***************/
+
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .content-in {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .content-in {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+/************* PORTFOLIO START *************/
+
+.portfolio #portfolio-flters {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.portfolio #portfolio-flters li {
+        cursor: pointer;
+        display: inline-block;
+/*         margin: 0 10px 10px 10px;*/
+        margin: 0 5px 10px 5px;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1;
+        padding: 7px 10px;
+        text-transform: uppercase;
+        color: #444444;
+        transition: all 0.3s ease-in-out;
+        border: 2px solid #fff;
+    }
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+    color: #f3a200;
+    border-color: #ffb727;
+}
+
+.portfolio .portfolio-item {
+    margin-bottom: 30px;
+}
+
+.portfolio .portfolio-item .portfolio-img {
+    overflow: hidden;
+}
+
+.portfolio .portfolio-item .portfolio-img img {
+    transition: all 0.8s ease-in-out;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    z-index: 3;
+    right: 15px;
+    transition: all ease-in-out 0.3s;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link,
+.portfolio .portfolio-item .portfolio-info .details-link {
+    position: absolute;
+    right: 40px;
+    font-size: 24px;
+    top: calc(50% - 18px);
+    color: #fff;
+    transition: 0.3s;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link:hover,
+.portfolio .portfolio-item .portfolio-info .details-link:hover {
+    color: #ffc041;
+}
+
+.portfolio .portfolio-item .portfolio-info .details-link {
+    right: 10px;
+}
+
+.portfolio .portfolio-item:hover .portfolio-img img {
+    transform: scale(1.2);
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
+    opacity: 1;
+}
+
+
+/************* PORTFOLIO END *************/
+
+
+/************* KAPCSOLAT  *************/
+
+body.kapcsolat {
+    margin: 0;
+    font-size: 16px;
+/*    font-family: 'Roboto', sans-serif;*/
+    background-image: url(../img/background-2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.kapcsolat .content-in {
+    max-width: 500px;
+}
+
+form {
+    background: #ececec;
+    margin: 0;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/************* KAPCSOLAT END *************/
+
+
+
+/************* FOOTER START *****************/
+
+footer i {
+    padding: 10px;
+    color: black;
+    font-size: 36px !important;
+}
+
+/************* FOOTER END *****************/
