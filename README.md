@@ -9,7 +9,11 @@ Teszt felhasználónév: teszt
 Jelszó: teszt123
 
 Telepítés:
+<<<<<<< HEAD
 vizsga_2 könyvtárat kibontás után be kell másolni a webszerver adott könyvtárába és a mellékelt adatbázist fel kell csatolni.
+=======
+A vizsga_2 könyvtárat kibontás után be kell másolni a webszerver adott könyvtárába és a mellékelt adatbázist fel kell csatolni.
+>>>>>>> 2350c74269198e577f19107a6e24432e91e2a49c
 
 Az adatbázis kapcsolatot a kövtkező helyeken kell megadni (localhost/vizsga_2 root könyvtárhoz képest):
 conf.php
